@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkedIn Clone - Dark Theme</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <div class="logo">in</div>
+        <input type="text" class="search-box" placeholder="Search" />
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">Home</li>
+        <li class="nav-item">Network</li>
+        <li class="nav-item">Jobs</li>
+        <li class="nav-item">Messages</li>
+        <li class="nav-item">Notifications</li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <!-- Left Sidebar -->
+      <div class="sidebar-left">
+        <div class="profile-card">
+          <div class="profile-header">
+            <div class="cover-img"></div>
+            <div class="profile-pic"></div>
+          </div>
+          <div class="profile-info">
+            <h2>John Doe</h2>
+            <p>Senior Software Engineer | Tech Company</p>
+            <p>San Francisco Bay Area</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Feed -->
+      <div class="feed">
+        <div class="post-card">
+          <div class="post">
+            <div class="post-header">
+              <div class="post-avatar"></div>
+              <div class="post-user-info">
+                <h3>Sarah Johnson</h3>
+                <p>Product Manager at Tech Co • 2h</p>
+              </div>
+            </div>
+            <div class="post-content">
+              <p>
+                Excited to announce our new product launch! After months of hard
+                work, our team has created something amazing. #Innovation
+                #Technology
+              </p>
+              <img
+                src="/api/placeholder/600/400"
+                alt="Product Launch"
+                class="post-image"
+              />
+            </div>
+            <div class="post-actions">
+              <button class="action-button">Like</button>
+              <button class="action-button">Comment</button>
+              <button class="action-button">Share</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-card">
+          <div class="post">
+            <div class="post-header">
+              <div class="post-avatar"></div>
+              <div class="post-user-info">
+                <h3>Mike Chen</h3>
+                <p>Software Engineer • 4h</p>
+              </div>
+            </div>
+            <div class="post-content">
+              <p>
+                Just published my first technical blog post about building
+                scalable systems. Check it out! #Programming #Engineering
+              </p>
+            </div>
+            <div class="post-actions">
+              <button class="action-button">Like</button>
+              <button class="action-button">Comment</button>
+              <button class="action-button">Share</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="sidebar-right">
+        <div class="news-card">
+          <h3>LinkedIn News</h3>
+          <div class="news-item">
+            <p>• Tech hiring continues to grow</p>
+            <p>• 10,000 readers</p>
+          </div>
+          <div class="news-item">
+            <p>• New AI breakthroughs</p>
+            <p>• 8,542 readers</p>
+          </div>
+          <div class="news-item">
+            <p>• Remote work trends in 2024</p>
+            <p>• 5,290 readers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Enhanced JavaScript for interactive features
+      document.addEventListener("DOMContentLoaded", function () {
+        // Handle post interactions
+        const actionButtons = document.querySelectorAll(".action-button");
+
+        actionButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Toggle active state
+            this.classList.toggle("active");
+
+            // You could add counter functionality here
+            if (this.textContent.includes("Like")) {
+              this.style.color = this.classList.contains("active")
+                ? "#0a66c2"
+                : "#b0b0b0";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
