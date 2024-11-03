@@ -277,10 +277,10 @@
     }
   
     .nav-item:nth-child(1)::before {
-      content: '🏠'; /* Example icon for Home */
+      content: '🔎'; /* Example icon for Home */
     }
     .nav-item:nth-child(2)::before {
-      content: '🔗'; /* Example icon for Network */
+      content: '🏠'; /* Example icon for Network */
     }
     .nav-item:nth-child(3)::before {
       content: '💼'; /* Example icon for Jobs */
@@ -290,5 +290,8 @@
     }
     .nav-item:nth-child(5)::before {
       content: '🔔'; /* Example icon for Notifications */
+    }
+    .nav-item:nth-child(6)::before {
+      content: ''; /* Example icon for Notifications */
     }
   }
