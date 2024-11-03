@@ -36,14 +36,15 @@
   .logo {
     background-color: #0a66c2;
     color: white;
-    width: 34px;
-    height: 34px;
+    width: 28px;
+    height: 28px;
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
     font-size: 1.2rem;
+    cursor: pointer;
   }
   
   .search-box {
@@ -75,6 +76,11 @@
   .nav-item:hover {
     color: white;
   }
+
+  .nav-item::before{
+    content: "";
+    margin-right: 8px;
+  }
   
   /* Main content layout */
   .main-content {
@@ -95,12 +101,14 @@
   
   .profile-header {
     position: relative;
-    height: 200px;
+    height: 150px;
   }
   
-  .cover-img {
-    height: 60px;
-    background-color: #0a66c2;
+  .cover-img-container , .cover-img {
+    height: 104ppx;
+    width: 270px;
+    /* background-color: #0a66c2; */
+   
   }
   
   .profile-pic {
@@ -254,9 +262,33 @@
       padding: 0.5rem 1rem;
     }
     .search-box {
-      width: 200px;
+      display: none;
     }
     .nav-menu {
-      gap: 1rem;
+      gap: 0.5rem;
+    }
+    .nav-item {
+      font-size: 0; /* Hide the text */
+    }
+  
+    /* Show icons by adjusting pseudo-element content */
+    .nav-item::before {
+      font-size: 20px; /* Size for icons */
+    }
+  
+    .nav-item:nth-child(1)::before {
+      content: '🏠'; /* Example icon for Home */
+    }
+    .nav-item:nth-child(2)::before {
+      content: '🔗'; /* Example icon for Network */
+    }
+    .nav-item:nth-child(3)::before {
+      content: '💼'; /* Example icon for Jobs */
+    }
+    .nav-item:nth-child(4)::before {
+      content: '✉️'; /* Example icon for Messages */
+    }
+    .nav-item:nth-child(5)::before {
+      content: '🔔'; /* Example icon for Notifications */
     }
   }
