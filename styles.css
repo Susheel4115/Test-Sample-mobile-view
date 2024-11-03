@@ -265,7 +265,7 @@
       display: none;
     }
     .nav-menu {
-      gap: 0.5rem;
+      gap: 0.8rem;
     }
     .nav-item {
       font-size: 0; /* Hide the text */
